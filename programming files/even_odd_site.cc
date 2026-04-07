@@ -2,6 +2,8 @@
 #include <fstream>
 using namespace std;
 
+// Code that does stuff
+
 int main() {
     ofstream file;
     file.open("numbers.html");
