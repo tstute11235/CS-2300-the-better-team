@@ -3,6 +3,10 @@
 #include <algorithm>
 using namespace std;
 
+// remove_duplicates -- takes an input vector and removes all duplicates, placing them in another vector, returns the vector without duplicates
+// arr -- integer vector input (some example vector)
+// removed_elements -- integer vector input (empty vector being filled with the duplicated form arr)
+// unique_arr -- integer vector output (arr without the duplicates)
 vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
     vector<int> unique_arr;
     sort(arr.begin(), arr.end());
