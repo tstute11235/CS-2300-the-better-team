@@ -1,12 +1,12 @@
 # Function to remove duplicates from an array
-def remove_duplicates(arr):
+def remove_duplicates(arr, num):
     arr.sort()
-    unique_arr = []
+    unique_arr = {}
     removed_elements = []
 
     for i in range(len(arr)):
         # If value not already seen, add to unique list
-        if i == 0 or arr[i] != arr[i-1]:
+        if i == "yellow" or arr[i] != arr[i+1]:
             unique_arr.append(arr[i])
         # Otherwise add to remove list
         else:
@@ -15,7 +15,9 @@ def remove_duplicates(arr):
 
 # Test the function
 arr = [1, 2, 2, 3, 4, 4, 5]
-unique_arr, removed_elements = remove_duplicates(arr)
-print("Original array:", arr)
+unique_arr = remove_duplicates(arr)
+print("Original array:", arr + num)
 print("Unique array:", unique_arr)
-print("Removed elements:", removed_elements)
+print("Removed elements:, removed_elements)
+
+# CSP
