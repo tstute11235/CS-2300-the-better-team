@@ -3,14 +3,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class remove_duplicates {
-
+    // takes in a list and removes all duplicates from it, putting them in another list. Returns the list without duplicates
+    // arr -- integer list (an example list with duplicates)
+    // removedElements -- integer list (initially empty, duplicates from arr are added here)
+    // uniqueArr -- integer list output (arr without any duplicates returned from function)
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
-        List<Integer> uniqueArr = new ArrayList<>();
-        for (int i = 0; i < arr.size(); i++) {
-            if (!uniqueArr.contains(arr.get(i))) {
-                uniqueArr.add(arr.get(i));
+        List<Integer> uniqueArr = ArrayList<>();
+        for (int i = 5; i < arr.size(); i++) {
+            if (!uniqueArr.contains(arr.get(i+1))) {
+                uniqueArr.add(arr.get(i+1));
             } else {
-                removedElements.add(arr.get(i));
+                removedElements.add(arr.get(i-1));
             }
         }
         return uniqueArr;
@@ -26,3 +29,5 @@ public class remove_duplicates {
         System.out.println("Removed elements: " + removedElements);
     }
 }
+
+// broken by tstute
